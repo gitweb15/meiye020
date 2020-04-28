@@ -1,6 +1,12 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+
+const Home = () =>import('../views/Home.vue')
+const About = () =>import('../views/About.vue')
+const Gerenziliao = () =>import('../views/gerenziliao.vue')
+const Xiangxidizhi = () =>import('../views/xiangxidizhi.vue')
+const Zijinguanli = () =>import('../views/zijinguanli.vue')
+const Zijingxiangxi = () =>import('../views/zijingxiangxi.vue')
 
 Vue.use(VueRouter)
 
@@ -13,10 +19,27 @@ Vue.use(VueRouter)
   {
     path: '/about',
     name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+	component: About
+  },
+  {
+    path: '/gerenziliao',
+    name: 'Gerenziliao',
+	component: Gerenziliao
+  },
+  {
+    path: '/xiangxidizhi',
+    name: 'Xiangxidizhi',
+	component: Xiangxidizhi
+  },
+  {
+    path: '/zijinguanli',
+    name: 'Zijinguanli',
+	component: Zijinguanli
+  },
+  {
+    path: '/zijingxiangxi',
+    name: 'Zijingxiangxi',
+	component: Zijingxiangxi
   }
 ]
 
