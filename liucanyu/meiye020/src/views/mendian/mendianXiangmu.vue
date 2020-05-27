@@ -1,0 +1,162 @@
+<template>
+	<!-- 门店项目 -->
+	<div id="xiangmu">
+		<Header3 title="项目名称"></Header3>
+		<div class="xiangmu">
+			<div class="content">
+				<img :src="tupian" class="tupian" style="height:314px; width: 350px;">
+				<p class="one"><span class="zuo">项目名称</span><span class="you">￥{{jiage}}</span></p>
+				<div class="three">{{jieshao}}</div>
+			</div>
+			<div class="nei">
+				<div class="content1">
+					<span class="img" style="width: 60px;height: 60px;">
+						<img :src="tupian1" style="width: 100%;" />
+					</span>
+					<div class="neirong">
+						<p class="p1">{{name}}</p>
+						<p class="p2">{{pingfen}}</p>
+					</div>
+				</div>
+			</div>
+
+			<van-button type="default" class="anniu" is-link url="/mendianYuyue">立即预约</van-button>
+		</div>
+	</div>
+</template>
+
+<script>
+	// 引入组件
+	import Header3 from '../../components/header3.vue';
+	export default {
+		name: 'mendianXiangmu',
+		components: {
+			Header3
+		},
+		data() {
+			return {
+				tupian: '/img/服务.236c3fcf.png', //服务图片
+				jiage: '99.0', //价格
+				time: '60', //时间
+				jieshao: '项目服务内容简介，最多显示2行，多余省略项目服务内容简介，最多显示2行，多余省略', //项目服务内容简介
+				tupian1: '../img/美容师.76d81d89.jpg', //美容师图片
+				name: '美体师名称', //美体师名称
+				pingfen: '守时5.0 专业5.0 沟通5.0' //评分
+			}
+		}
+	}
+</script>
+
+<style scoped>
+	.xiangmu {
+		border-width: 0px;
+		position: relative;
+		width: 100%;
+		height: 600px;
+		background: inherit;
+		background-color: rgba(229, 229, 229, 1);
+		border: none;
+		border-radius: 0px;
+		padding-top: 3px;
+
+		font-family: 'Arial Normal', 'Arial';
+		font-weight: 400;
+		font-style: normal;
+		font-size: 15px;
+		letter-spacing: normal;
+		color: #333333;
+	}
+
+	.content {
+		width: 100%;
+		height: 425px;
+		background-color: #fff;
+	}
+
+	.tupian {
+		display: block;
+		margin: 0px auto;
+		padding-top: 10px;
+		/* width: 93%; */
+		width: 350px;
+	}
+
+	.one {
+		margin: 20px auto 14px;
+		width: 93%;
+		height: 15px;
+	}
+
+	.one .zuo {
+		float: left;
+		font-size: 15px;
+	}
+
+	.one .you {
+		float: right;
+		font-family: 'Arial Negreta', 'Arial Normal', 'Arial';
+		font-weight: 700;
+		font-style: normal;
+		color: #FF0000;
+		text-align: right;
+	}
+
+	.two {
+		margin: 0px auto 10px;
+		width: 93%;
+		height: 13px;
+	}
+
+	.three {
+		margin: 0px auto;
+		width: 93%;
+		/* height: 13px; */
+		padding-bottom: 23px;
+	}
+
+	.anniu {
+		width: 100%;
+		margin-top: 20px;
+		cursor: pointer;
+	}
+
+	.nei {
+		width: 100%;
+		height: 100px;
+		background-color: #fff;
+	}
+
+	.content1 {
+		width: 95%;
+		/* height: 100%; */
+		background-color: #fff;
+		float: right;
+		border-top: 1px solid #E4E4E4;
+	}
+
+	.img {
+		display: inline-block;
+		margin-top: 14px;
+		float: left;
+	}
+
+	.neirong {
+		display: inline-block;
+		width: 65%;
+		float: left;
+	}
+
+	.neirong p {
+		margin-top: 16px;
+		margin-left: 10px;
+	}
+
+	.p1 {
+		font-size: 14px;
+	}
+
+	.p2 {
+		font-size: 12px;
+		color: #999999;
+	}
+</style>
